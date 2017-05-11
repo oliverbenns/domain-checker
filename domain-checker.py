@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import subprocess
 from config import Config
+from notify import notify
 
 for name in Config.names:
   for extension in Config.extensions:
@@ -11,8 +12,6 @@ for name in Config.names:
 
     available = b"No match for" in output
 
+    if available:
+      notify(domain)
 
-    if taken:
-      print("domain is taken.")
-    else:
-      print("domain is available.")
