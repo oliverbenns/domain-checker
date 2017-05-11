@@ -1,17 +1,18 @@
 # Domain Checker
-Tool to check if domains are available.
+Tool to check if domains are available - notifies with Mac notifications.
 
-## Pseudo / Todo
+## Dependencies
 
-- Store array of wanted keywords (e.g. google, microsoft, facebook)
-- Store array of wanted extensions (e.g. com, co.uk, net)
+- Python 3
+- Bash + Whois + Grep (probably already installed)
 
-- For each keyword in keywords
-  - for each extension in extensions
-    - Do a whois lookup for keyword + extension
-    - Analyse whois lookup response
-    - If available
-      - stdout > "Domain _ is available"
-      - notify (email? apple notification? run a bash script?)
-    - Else
-      - Nothing
+## Usage
+
+- Edit `config.py` to include domain names and extensions that you want to check.
+- Run `./domain-checker.py`
+
+## Automatic checking
+
+- Set up a Cronjob:
+  - `export VISUAL=nano; crontab -e` (or use Vim if you want).
+  - Add `0 */6 * * * /path/to/domain-checker.py` (run every 6 hours - change this if you want).
