@@ -4,8 +4,6 @@ import subprocess
 import time
 
 def notify(domain):
-  print("Domain available: " + domain)
-
   # Mac notification
   command = "osascript '-e display notification \"" + domain + "\" with title \"Domain available\"'"
   subprocess.call(command, shell=True)

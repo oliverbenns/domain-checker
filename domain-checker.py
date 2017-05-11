@@ -2,6 +2,7 @@
 
 import subprocess
 from config import Config
+from colors import Colors
 from notify import notify
 
 for name in Config.names:
@@ -14,5 +15,8 @@ for name in Config.names:
     available = b"No match for" in output
 
     if available:
+      print(Colors.success + "Domain available: " + domain + Colors.none)
       notify(domain)
+    else:
+      print(Colors.fail + "Domain taken: " + domain + Colors.none)
 

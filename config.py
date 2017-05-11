@@ -2,8 +2,11 @@
 
 class Config:
   names = [
-    "google",
-    "awdbadwhbawdbhsssj"
+    "delight",
+    "tomorrow",
+    "storytellers",
+    "adorn",
+    "nexawdt",
   ]
   extensions = [
     "com",
