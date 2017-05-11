@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import subprocess
 from config import Config
 from notify import notify
