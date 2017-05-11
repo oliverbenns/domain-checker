@@ -2,11 +2,8 @@
 
 class Config:
   names = [
-    "delight",
-    "tomorrow",
-    "storytellers",
-    "adorn",
-    "nexawdt",
+    "google",
+    "domain-checker-rules-abcdef",
   ]
   extensions = [
     "com",
